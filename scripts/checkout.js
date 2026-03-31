@@ -112,6 +112,8 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
 
       html+= `
     <div class="delivery-option js-delivery-option"
+    data-product-id="${matchingProduct.id}"
+    data-delivery-option-id="${deliveryOption.id}"> 
       data-product-id="${matchingProduct.id}"
       data-delivery-option-id="${deliveryOption.id}">
           <input type="radio"
@@ -131,5 +133,25 @@ function deliveryOptionsHTML(matchingProduct,cartItem){
   return html;
 }
 
-// Initial render
-renderOrderSummary();
+document.querySelector('.js-order-summary')
+  .innerHTML = cartSummaryHTML;
+
+document.querySelectorAll('.js-delete-link')
+  .forEach((link) => {
+    link.addEventListener('click', () => {
+      const productId = link.dataset.productId;
+      removeFromCart(productId);
+
+      const container = document.querySelector(
+        `.js-cart-item-container-${productId}`
+      );
+      container.remove();
+    });
+  });
+  document.querySelectorAll('.js-delivery-option')
+  .forEach((element)=>{
+    element.addEventListener('click',()=>{
+        const {productId,deliveryOptionId}=element.dataset;
+        updateDeliveryOption(productId,deliveryOptionId);
+    })
+  })
