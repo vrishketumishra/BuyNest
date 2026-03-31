@@ -50,7 +50,7 @@ export  function removeFromCart(productId){
     let matchingItem;
 
            cart.forEach((cartItem)=>{
-            if(productID===cartItem.productID){
+            if(productId===cartItem.productID){
                 matchingItem=cartItem;
             }
            });
