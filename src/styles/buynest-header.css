@@ -1,0 +1,187 @@
+.buynest-header {
+  background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.buynest-header-left-section {
+  width: 200px;
+}
+
+.header-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.header-link:hover {
+  border-color: var(--primary);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.buynest-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.logo-buy {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-nest {
+  background: linear-gradient(90deg, #764ba2 0%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.buynest-header-middle-section {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 20px;
+  display: flex;
+  gap: 0;
+}
+
+.search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 44px;
+  padding: 0 18px;
+  border: 2px solid var(--border-color);
+  border-right: none;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background: var(--background-card);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.search-button {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  border: none;
+  width: 50px;
+  height: 44px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+  box-shadow: 0 4px 15px var(--glow);
+}
+
+.search-icon {
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.buynest-header-right-section {
+  width: 220px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.orders-link {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.returns-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.orders-text {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+}
+
+.cart-icon {
+  width: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.cart-text {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-quantity {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  top: -8px;
+  left: 18px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px var(--glow);
+}
+
+@media (max-width: 800px) {
+  .buynest-header-left-section {
+    width: auto;
+  }
+  
+  .buynest-header-middle-section {
+    margin: 0 10px;
+  }
+  
+  .buynest-header-right-section {
+    width: auto;
+  }
+  
+  .returns-text {
+    display: none;
+  }
+}

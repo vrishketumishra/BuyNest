@@ -6,10 +6,7 @@
   margin-top: 140px;
   margin-bottom: 100px;
 
-  /* margin-left: auto;
-     margin-right auto;
-     Is a trick for centering an element horizontally
-     without needing a container. */
+  
   margin-left: auto;
   margin-right: auto;
 }
@@ -18,6 +15,7 @@
   font-weight: 700;
   font-size: 22px;
   margin-bottom: 18px;
+  color: #e0e0e0;
 }
 
 .checkout-grid {
@@ -44,9 +42,12 @@
 
 .cart-item-container,
 .payment-summary {
-  border: 1px solid rgb(222, 222, 222);
-  border-radius: 4px;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
   padding: 18px;
+  background: rgba(30, 30, 50, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cart-item-container {
@@ -69,7 +70,7 @@
 }
 
 .delivery-date {
-  color: rgb(0, 118, 0);
+  color: #10b981;
   font-weight: 700;
   font-size: 19px;
   margin-top: 5px;
@@ -107,10 +108,11 @@
 .product-name {
   font-weight: 700;
   margin-bottom: 8px;
+  color: #e0e0e0;
 }
 
 .product-price {
-  color: rgb(177, 39, 4);
+  color: #667eea;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -152,13 +154,13 @@
 }
 
 .delivery-option-date {
-  color: rgb(0, 118, 0);
+  color: #10b981;
   font-weight: 500;
   margin-bottom: 3px;
 }
 
 .delivery-option-price {
-  color: rgb(120, 120, 120);
+  color: rgba(224, 224, 224, 0.7);
   font-size: 15px;
 }
 
@@ -166,6 +168,7 @@
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 12px;
+  color: #e0e0e0;
 }
 
 .payment-summary-row {
@@ -184,7 +187,7 @@
 }
 
 .subtotal-row .payment-summary-money {
-  border-top: 1px solid rgb(222, 222, 222);
+  border-top: 1px solid rgba(102, 126, 234, 0.3);
 }
 
 .subtotal-row div {
@@ -192,11 +195,11 @@
 }
 
 .total-row {
-  color: rgb(177, 39, 4);
+  color: #667eea;
   font-weight: 700;
   font-size: 18px;
 
-  border-top: 1px solid rgb(222, 222, 222);
+  border-top: 1px solid rgba(102, 126, 234, 0.3);
   padding-top: 18px;
 }
 

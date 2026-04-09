@@ -5,10 +5,7 @@
   padding-left: 30px;
   padding-right: 30px;
 
-  /* margin-left: auto;
-     margin-right auto;
-     Is a trick for centering an element horizontally
-     without needing a container. */
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -16,16 +13,26 @@
 .back-to-orders-link {
   display: inline-block;
   margin-bottom: 30px;
+  color: #667eea;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-to-orders-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
 }
 
 .delivery-date {
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #e0e0e0;
 }
 
 .product-info {
   margin-bottom: 3px;
+  color: #e0e0e0;
 }
 
 .product-image {
@@ -44,7 +51,7 @@
 }
 
 .current-status {
-  color: rgb(6, 125, 98);
+  color: #10b981;
 }
 
 @media (max-width: 575px) {
@@ -68,14 +75,16 @@
   height: 25px;
   width: 100%;
 
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid rgba(102, 126, 234, 0.3);
   border-radius: 50px;
   overflow: hidden;
+  background: rgba(30, 30, 50, 0.6);
 }
 
 .progress-bar {
   height: 100%;
-  background-color: green;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
   border-radius: 50px;
   width: 50%;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
 }

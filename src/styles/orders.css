@@ -1,0 +1,142 @@
+.orders-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.order-container {
+  background: var(--background-card);
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.order-container:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 25px var(--glow);
+}
+
+.order-header {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.order-header-left-section {
+  display: flex;
+  gap: 40px;
+}
+
+.order-date, .order-total {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-header-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.order-header-left-section div:last-child {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.order-header-right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-header-right-section div:last-child {
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.order-details-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 25px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .order-details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .order-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.order-product-image {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(40, 40, 70, 0.6);
+  padding: 10px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-name {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--text-primary);
+}
+
+.product-delivery-date {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.product-quantity {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.buy-again-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buy-again-icon {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+}
+
+.track-package-button {
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
