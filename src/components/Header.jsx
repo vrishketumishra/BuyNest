@@ -16,7 +16,7 @@ function Header({ cartQuantity }) {
       <div className="buynest-header-middle-section">
         <input className="search-bar" type="text" placeholder="Search products..." />
         <button className="search-button">
-          <img className="search-icon" src="/BuyNest/images/icons/search-icon.png" alt="Search" />
+          <img className="search-icon" src="./images/icons/search-icon.png" alt="Search" />
         </button>
       </div>
 
@@ -27,7 +27,7 @@ function Header({ cartQuantity }) {
         </Link>
 
         <Link className="cart-link header-link" to="/checkout">
-          <img className="cart-icon" src="/BuyNest/images/icons/cart-icon.png" alt="Cart" />
+          <img className="cart-icon" src="./images/icons/cart-icon.png" alt="Cart" />
           <span className="cart-text">Cart</span>
           {cartQuantity > 0 && (
             <div className="cart-quantity">{cartQuantity}</div>
