@@ -5,9 +5,11 @@ import '../styles/home.css';
 
 function Home({ cartQuantity, onAddToCart }) {
   const [loading, setLoading] = useState(true);
+  const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
     loadProductsFetch().then(() => {
+      setProductsList([...products]);
       setLoading(false);
     });
   }, []);
@@ -26,7 +28,7 @@ function Home({ cartQuantity, onAddToCart }) {
     <div className="main">
       <h1 className="page-title">Featured Products</h1>
       <div className="products-grid">
-        {products.map((product) => (
+        {productsList.map((product) => (
           <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
         ))}
       </div>
