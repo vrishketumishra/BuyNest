@@ -4,25 +4,14 @@ import ProductCard from '../components/ProductCard.jsx';
 import '../styles/home.css';
 
 function Home({ cartQuantity, onAddToCart }) {
-  const [loading, setLoading] = useState(true);
-  const [productsList, setProductsList] = useState([]);
+  const [productsList, setProductsList] = useState(products);
 
   useEffect(() => {
+    // Products are already loaded, just trigger a re-render if backend updates them
     loadProductsFetch().then(() => {
       setProductsList([...products]);
-      setLoading(false);
     });
   }, []);
-
-  if (loading) {
-    return (
-      <div className="main">
-        <div style={{ textAlign: 'center', padding: '50px', color: 'var(--text-secondary)' }}>
-          Loading products...
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="main">
