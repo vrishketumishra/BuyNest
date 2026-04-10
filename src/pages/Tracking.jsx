@@ -1,6 +1,8 @@
 import { useSearchParams, Link } from 'react-router-dom';
 import '../styles/tracking.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function Tracking() {
   const [searchParams] = useSearchParams();
   const orderId = searchParams.get('orderId');
@@ -25,7 +27,7 @@ function Tracking() {
           Quantity: 1
         </div>
 
-        <img className="product-image" src="/images/products/athletic-cotton-socks-6-pairs.jpg" alt="Product" />
+        <img className="product-image" src={`${BASE_URL}images/products/athletic-cotton-socks-6-pairs.jpg`} alt="Product" />
 
         <div className="progress-labels-container">
           <div className="progress-label">Preparing</div>

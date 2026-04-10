@@ -1,5 +1,7 @@
 import {formatCurrency} from '../utils/money.js';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export function getProduct(productId) {
   let matchingProduct;
   products.forEach((product) => {
@@ -19,14 +21,16 @@ class Product {
 
   constructor(productDetails) {
     this.id = productDetails.id;
-    this.image = productDetails.image;
+    this.image = productDetails.image.startsWith('http') 
+      ? productDetails.image 
+      : `${BASE_URL}${productDetails.image}`;
     this.name = productDetails.name;
     this.rating = productDetails.rating;
     this.priceCents = productDetails.priceCents;
   }
 
   getStarsUrl() {
-    return `images/ratings/rating-${this.rating.stars * 10}.png`;
+    return `${BASE_URL}images/ratings/rating-${this.rating.stars * 10}.png`;
   }
 
   getPrice() {

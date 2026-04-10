@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import '../styles/orders.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function Orders() {
   const sampleOrders = [
     {
@@ -10,13 +12,13 @@ function Orders() {
       products: [
         {
           name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
-          image: '/images/products/athletic-cotton-socks-6-pairs.jpg',
+          image: `${BASE_URL}images/products/athletic-cotton-socks-6-pairs.jpg`,
           deliveryDate: 'August 15',
           quantity: 1
         },
         {
           name: 'Adults Plain Cotton T-Shirt - 2 Pack',
-          image: '/images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
+          image: `${BASE_URL}images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg`,
           deliveryDate: 'August 19',
           quantity: 2
         }
@@ -29,7 +31,7 @@ function Orders() {
       products: [
         {
           name: 'Intermediate Size Basketball',
-          image: '/images/products/intermediate-composite-basketball.jpg',
+          image: `${BASE_URL}images/products/intermediate-composite-basketball.jpg`,
           deliveryDate: 'June 17',
           quantity: 2
         }
@@ -69,7 +71,7 @@ function Orders() {
                     <div className="product-delivery-date">Arriving on: {product.deliveryDate}</div>
                     <div className="product-quantity">Quantity: {product.quantity}</div>
                     <button className="buy-again-button button-primary">
-                      <img className="buy-again-icon" src="/images/icons/buy-again.png" alt="Buy Again" />
+                      <img className="buy-again-icon" src={`${BASE_URL}images/icons/buy-again.png`} alt="Buy Again" />
                       <span>Buy it again</span>
                     </button>
                   </div>

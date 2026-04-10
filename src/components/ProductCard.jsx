@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { addToCart } from '../data/cart.js';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function ProductCard({ product, onAddToCart }) {
   const [addedToCart, setAddedToCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -44,7 +46,7 @@ function ProductCard({ product, onAddToCart }) {
       <div className="product-spacer"></div>
 
       <div className={`added-to-cart ${addedToCart ? 'show' : ''}`}>
-        <img src="/images/icons/checkmark.png" alt="Added" />
+        <img src={`${BASE_URL}images/icons/checkmark.png`} alt="Added" />
         <span>Added to cart</span>
       </div>
 
