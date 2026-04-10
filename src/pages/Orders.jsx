@@ -63,13 +63,13 @@ function Orders() {
             <div className="order-details-grid">
               {order.products.map((product, index) => (
                 <div key={index} style={{ display: 'contents' }}>
-                  <img className="order-product-image" src={product.image} alt={product.name} />
+                  <img className="order-product-image" src={`/BuyNest${product.image}`} alt={product.name} />
                   <div className="product-details">
                     <div className="product-name">{product.name}</div>
                     <div className="product-delivery-date">Arriving on: {product.deliveryDate}</div>
                     <div className="product-quantity">Quantity: {product.quantity}</div>
                     <button className="buy-again-button button-primary">
-                      <img className="buy-again-icon" src="/images/icons/buy-again.png" alt="Buy Again" />
+                      <img className="buy-again-icon" src="/BuyNest/images/icons/buy-again.png" alt="Buy Again" />
                       <span>Buy it again</span>
                     </button>
                   </div>
