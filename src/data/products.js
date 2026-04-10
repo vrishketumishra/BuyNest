@@ -62,23 +62,25 @@ class Clothing extends Product {
 export let products = [];
 
 export function loadProductsFetch() {
+  console.log('Loading products from:', `${BASE_URL}backend/products.json`);
   const promise = fetch(
     `${BASE_URL}backend/products.json`
   ).then((response) => {
     if (!response.ok) {
-      throw new Error('Failed to load products');
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
     return response.json();
   }).then((productsData) => {
+    console.log('Products data received:', productsData.length, 'items');
     products = productsData.map((productDetails) => {
       if (productDetails.type === 'clothing') {
         return new Clothing(productDetails);
       }
       return new Product(productDetails);
     });
-    console.log(`Successfully loaded ${products.length} products`);
+    console.log(`✅ Successfully loaded ${products.length} products`);
   }).catch((error) => {
-    console.error('Error loading products:', error);
+    console.error('❌ Error loading products:', error.message);
   });
   return promise;
 }
