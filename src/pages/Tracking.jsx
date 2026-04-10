@@ -25,7 +25,7 @@ function Tracking() {
           Quantity: 1
         </div>
 
-        <img className="product-image" src="./images/products/athletic-cotton-socks-6-pairs.jpg" alt="Product" />
+        <img className="product-image" src="/images/products/athletic-cotton-socks-6-pairs.jpg" alt="Product" />
 
         <div className="progress-labels-container">
           <div className="progress-label">Preparing</div>

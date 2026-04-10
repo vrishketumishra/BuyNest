@@ -24,7 +24,7 @@ function Home({ cartQuantity, onAddToCart }) {
 
   return (
     <div className="main">
-      <h1 className="page-title">Featured Products ({products.length})</h1>
+      <h1 className="page-title">Featured Products</h1>
       <div className="products-grid">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />

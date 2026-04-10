@@ -17,13 +17,13 @@ function ProductCard({ product, onAddToCart }) {
   return (
     <div className="product-container">
       <div className="product-image-container">
-        <img className="product-image" src={`.${product.image}`} alt={product.name} />
+        <img className="product-image" src={product.image} alt={product.name} />
       </div>
 
       <div className="product-name">{product.name}</div>
 
       <div className="product-rating-container">
-        <img className="product-rating-stars" src={`.${product.getStarsUrl()}`} alt="Rating" />
+        <img className="product-rating-stars" src={product.getStarsUrl()} alt="Rating" />
         <div className="product-rating-count">{product.rating.count}</div>
       </div>
 
@@ -38,13 +38,13 @@ function ProductCard({ product, onAddToCart }) {
       </div>
 
       {product.extraInfoHTML() && (
-        <div dangerouslySetInnerHTML={{ __html: product.extraInfoHTML().replace('href="images/', 'href="./images/') }} />
+        <div dangerouslySetInnerHTML={{ __html: product.extraInfoHTML() }} />
       )}
 
       <div className="product-spacer"></div>
 
       <div className={`added-to-cart ${addedToCart ? 'show' : ''}`}>
-        <img src="./images/icons/checkmark.png" alt="Added" />
+        <img src="/images/icons/checkmark.png" alt="Added" />
         <span>Added to cart</span>
       </div>
 

@@ -75,7 +75,7 @@ function Checkout({ onUpdateCart }) {
           {cartItems.map((item) => (
             <div key={item.productId} className="cart-item-container">
               <div className="cart-item-details-grid">
-                <img className="cart-item-image" src={`.${item.product.image}`} alt={item.product.name} />
+                <img className="cart-item-image" src={item.product.image} alt={item.product.name} />
                 <div>
                   <div className="product-name">{item.product.name}</div>
                   <div className="product-price">${(item.product.priceCents / 100).toFixed(2)}</div>
